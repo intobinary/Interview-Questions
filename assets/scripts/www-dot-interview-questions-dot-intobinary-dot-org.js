@@ -1,7 +1,7 @@
 /*===
-Into Binary (https://interview-questions.intobinary.org)
+Into Binary (https://piq.app.intobinary.org)
 &copy Coryright 2022 Into Binary. All rights reserved.
-Written for -- www.interview-questions.intobinary.org
+Written for -- www.piq.app.intobinary.org
 ===*/
 
 /*=== LIBRARIES ===*/
@@ -14,61 +14,92 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
 /*=== CUSTOM ===*/
 /*== [INTERVIEW QUESTIONS QUESTIONS -- Into Binary] ==*/
 var theInterviewQuestions = [
-	{
-		title: "What are the properties supporting CSS styles for a document element?",
-		choices: ["className and font", "style and className", "size and style", "style and font"],
-		answer: 2
-	},
+	{ title: "What project are you most proud of completing at this company?" },
+	{ title: "How many people are on the IT team?" },
+	{ title: "What are some of the big challenges facing your IT team?" },
+	{ title: "What is the biggest project you're working on currently?" },
+	{ title: "Which do you prefer: service-oriented or batch-oriented solutions?" },
+	{ title: "When was the last time you downloaded a utility from the internet to make your work more productive, and what was it?" },
+	{ title: "When is it appropriate to denormalize database design?" },
+	{ title: "What is the role of the DMZ in network architecture? How do you enfore relational integrity in database design?" },
+	{ title: "What is the role of SMNP?" },
+	{ title: "What is the role of continuous intergration systems in the automated-build process?" },
+	{ title: "What is the difference between OLAP and OLTP? When is each used?" },
+	{ title: "What is structure?" },
+	{ title: "What is most-important -- quality or quantity?" },
+	{ title: "What is ETL and when should it be used?" },
+	{ title: "What is clustering? Describe its use." },
+	{ title: "What is SAN, and how is it used?" },
+	{ title: "What are cross-site scripting attack, and how do you defend agains it?" },
+	{ title: "What have you done to ensure consistency across unity, quality, and production environments?" },
+	{ title: "What elements are necessary for a successful team, and why?" },
+	{ title: "What do you expect in the solution documents you are provided?" },
+	{ title: "What do you do to ensure you provide accurate project estimates?" },
+	{ title: "What do you consider documentation, and why is it important?" },
+	{ title: "What do you do to ensure quality in your deliverables?" },
+	{ title: "What are transaction logs, and how are they used?" },
+	{ title: "What are the most important database performance metrics, and how do you monitor them?" },
+	{ title: "In network security, what is honey pot, and why is it used?" },
+	{ title: "In databases, what is the difference between a delete statement and a truncate statement?" },
+	{ title: "If you know you aren't going to make a project deadline, what will you tell your manager and/or the client?" },
+	{ title: "How would you describe your ideal working environment?" },
+	{ title: "How much reuse do you get out of the code that you develop, and how?" },
+	{ title: "How much (what percentage) of your time do you spend on unit testing?" },
+	{ title: "How did you manage source control?" },
+	{ title: "Have you used Visual Studio?" },
+	{ title: "Have you used Eclipse?" },
+	{ title: "Describe the elements of an N-tier architecture and their appropriate use." },
+	{ title: "Define 'authentication,' and 'authorization,' and the tolls that are used to support them in enterprise deployments." },
+	{ title: "Compare and contrast REST and SOAP web services." },
+	{ title: "What companies do you see as the biggest competitors to this company?" },
+	{ title: "What challenges do you think you might expect in this job if you were hired?" },
+	{ title: "If hired, is there anything you would change about this IT team?" },
+	{ title: "How would you rate your key competencies for this job?" },
+	{ title: "How important is it to work directly with your business users?" },
+	{ title: "Have you worked with software vendors? How do you handle vendor relations?" },
+	{ title: "From the description of this position, what do you think you will be doing on a day-to-day basis?" },
+	{ title: "Describe your production deployment process." },
+	{ title: "Do you prefer to manage people or ideas?" },
+	{ title: "Describe the skills you have that qualify you for this job." },
+	{ title: "You have learned that a business unit is managing a manjor component of the business using Excel spreadsheets and Access databases. What risks does this present, and what would you recomment be done to mitigate these risks?" },
+	{ title: "You have submitted a piece of code that has broken the client's website in production. You have found this bug while you were testing, and nobody else knows about it. What is your next move?" },
+	{ title: "You have been asked to research a new business tool. You have come across two solutions. One is an on-premise solution; the other is cloud-based. Assuming they are functionally equivalent, why would you recommend one over the other?" },
+	{ title: "You are working at a client site, and the CTO of the client company has asked if she can see you. The CTO wants to know how much it would cost to bring in five more people on your team. She gives you very vague requirements of the job she is looking for you to do. What would you do?" },
+	{ title: "What is the biggest IT challenge you have faced, and how did you handle it?" },
+	{ title: "Give an example of where you have applied your technical knowledge in a practical way." },
+	{ title: "Tell me about the project you are most proud of and what your contribution was." },
+	{ title: "Tell me about the most recent project you worked on. What were your responsibilities." },
+	{ title: "How do you troubleshoot IT issues?" },
+	{ title: "How do you keep current in this industry?" },
+	{ title: "Describe your work pace." },
+	{ title: "How do you handle multiple deadlines?" },
+	{ title: "Given this problem (problem is based upon job requirements), what solution would you provide? Explain your thought process." },
+  { title: "Describe the most innovative change that you have initiated and what you did to implement this change." },
   {
-    title: "Which object is the main entry point to all client-side JavaScript features and APIs?",
-    choices: ["Standard", "Position", "Location", "Window"],
-    answer: 4
+    title: "Describe a time when you were able to improve upon the design that was originally suggested."
   },
   {
-    title: "How are the objects organized in HTML DOM?",
-    choices: ["Stack", "Queue", "List", "Hierarchy"],
-    answer: 4
+    title: "What technical websites do you follow?"
   },
   {
-    title: "The snippet that has to be used to check if “a” is not equal to “null” is",
-    choices: ["if(a!==null)", "if(a!=null)", "if(a!null)", "if(!a)"],
-    answer: 1
+    title: "What source control tools have you used?"
   },
   {
-    title: "What among the following is an appropriate event handler for input text among the below options?",
-    choices: ["onchange", "onclick", "onblur", "onkeyup"],
-    answer: 1
+    title: "What languages have you programmed in?"
   },
   {
-    title: "What will be the output if we compare “ten” and 10 with less than comparison operator(“ten”<10)?",
-    choices: ["undefined", "False", "True", "error"],
-    answer: 2
+    title: "What development tools have you used?"
   },
   {
-    title: "What is the substitute of == and !=? In JavaScript.",
-    choices: ["=== and !==", "Equals and not equals to", "EqualsTo", "= and !"],
-    answer: 1
+    title: "What automated-build tools or processes have you used?"
   },
   {
-    title: "What ingrediant is NOT commly found in curry?",
-    choices: ["salt", "coriander", "oats", "cumin"],
-    answer: "oats"
+    title: "What do you do to maintain your technical certifications?"
   },
   {
-    title: "What is the most common ratio for french bread?",
-    choices: ["100 66 2 1.2", "100 10 0 0", "100 99 2 2", "100 60 60 1"],
-    answer: "100 66 2 1.2"
+    title: "What certifications do you hold?"
   },
-  {
-    title: "Which is Tastiest?",
-    choices: ["Turkey and Cheese Cat Food", "Wild goat dog food", "Rabbit Food", "Roadkill Raccoon"],
-    answer: "Roadkill Raccoon"
-  },
-  {
-    title: "Which pratice is NOT consider safe food practice",
-    choices: ["Store meat in fridge", "Store meat in sun on front porch", "Eat chocolate", "Drink filtered water"],
-    answer: "Store meat in sun on front porch"
-  }
+  { title: "What interests you about this position?" }
 ]
 
 /*== [INTERVIEW QUESTIONS -- Into Binary] ==*/
@@ -88,6 +119,9 @@ intobinary(document).ready(function() {
 	/*** END GLOBAL VARIABLES & OBJECTS ***/
 	
 	/*** SETUP ***/
+	if("speechSynthesis" in window) {} else {
+		intobinary(".js-button_sound").addClass("is-hidden");
+	}
 	/*** END SETUP ***/
 	
 	/*** ACTIONS ***/
@@ -111,58 +145,83 @@ intobinary(document).ready(function() {
 		});
 		
 		intobinary(".js-button_start").click(function() {
-			var theTag = intobinary(this),
-				theTimeButtonTag = document.querySelector(".js-button_time");
-			
-			if(theTimeButtonTag.classList.contains("is-active")) {
-				startTimer();
-			}
-			
+			startTimer();
 			playQuiz(theInterviewQuestions);
 		});
 		
 		intobinary(".js-button_back").click(function() {			
-			resetQuestion();
+			resetApp();
 		});
 		
 		intobinary(".js-button_next").click(function() {
+			resetQuestion();
+			startTimer();
 			nextQuestion();
+		});
+		
+		intobinary(".js-button_pause").click(function() {
+			if(timerPaused == true) { timerPaused = false; }
+			else { timerPaused = true; }
 		});
 	/*** END ACTIONS ***/
 	
 	/*** FUNCTIONS ***/	
+	function startSpeech(questionToRead) {
+		var theSoungButtonTag = document.querySelector(".js-button_sound");
+		if(theSoungButtonTag.classList.contains("is-active")) {
+			var speechToRead = new SpeechSynthesisUtterance();
+			var speechVoices = window.speechSynthesis.getVoices();
+//			speechToRead.lang = "en-US";
+//			speechToRead.lang = "ru_RU";
+			speechToRead.voice = speechVoices[5];
+			speechToRead.pitch = 10;
+//			speechToRead.rate = 10;
+			speechToRead.text = questionToRead;
+
+			window.speechSynthesis.cancel();
+			window.speechSynthesis.speak(speechToRead);
+
+			document.querySelector(".js-button_pause").addEventListener("click", function() {
+				if(timerPaused == true) { window.speechSynthesis.pause(speechToRead); }
+				else { window.speechSynthesis.resume(speechToRead); }
+			});
+			
+			document.querySelector(".js-button_back").addEventListener("click", function() {
+				window.speechSynthesis.cancel();
+			});
+		}
+	}
+	
 	function startTimer() {
 		var theTimerTag = document.querySelector(".js-qTimerTag"),
+			theTimeButtonTag = document.querySelector(".js-button_time"),
 			timerTotalSecForCurrentQuestion = timerTotalSecPerQuestion,
 			timerTick = "";
 		
-		timerInterval = setInterval(function() {
-			if(timerPaused == false) {
-				if(timerTotalSecForCurrentQuestion >= 0) {
-					timerTick = timerTotalSecForCurrentQuestion--;
-					if (timerTick == 60) { theTimerTag.textContent = "01:00";  }
-					else if (timerTick < 60) { theTimerTag.textContent = "00:" + timerTick; }
-					else if (timerTick < 10) { theTimerTag.textContent = "00:0" + timerTick; }
-					else { theTimerTag.textContent = timerTick; }
-					
-					document.querySelector(".js-button_pause").addEventListener("click", function() {
-						if(timerPaused == true) { timerPaused = false; }
-						else { timerPaused = true; }
-					});
+		if(theTimeButtonTag.classList.contains("is-active")) {
+			timerInterval = setInterval(function() {
+				if(timerPaused == false) {
+					if(timerTotalSecForCurrentQuestion >= 0) {
+						timerTick = timerTotalSecForCurrentQuestion--;
+						if (timerTick == 60) { theTimerTag.textContent = "01:00";  }
+						else if (timerTick < 60) { theTimerTag.textContent = "00:" + timerTick; }
+						else if (timerTick < 10) { theTimerTag.textContent = "00:0" + timerTick; }
+						else { theTimerTag.textContent = timerTick; }
+					}
+					else {
+						resetQuestion();
+						startTimer();
+						nextQuestion();
+					}
 				}
-				else {
-					/*
-					answerSkipped = true;
-					revealAnswer();
-					*/
-				}
-			}
-		}, 1000);
+			}, 1000);
+		}
 	}
 
-	function resetApp() {
-		document.querySelector("#chkbx-quiz").checked = false;
+	function resetApp(varCMD) {
+		if(varCMD == "withChkbxQuiz") { document.querySelector("#chkbx-quiz").checked = false; }
 		qNoIndex = 0;
+		resetQuestion();
 	}
 	function resetQuestion() {
 		timerPaused = false;
@@ -175,7 +234,7 @@ intobinary(document).ready(function() {
 			theTimerTag = document.querySelector(".js-timerTag"),
 			theQTimerTag = document.querySelector(".js-qTimerTag");
 			
-//		thePauseButtonTag.removeClass("is-hidden");
+		thePauseButtonTag.removeClass("is-hidden");
 		if(theTimeButtonTag.hasClass("is-active")) {
 			theTimerTag.textContent = "01:00";
 			theQTimerTag.textContent = "01:00";
@@ -220,8 +279,9 @@ intobinary(document).ready(function() {
 			questionIndexTag.innerHTML = "Question " + qNoIndex;
 			
 			questionTag.textContent = currentQuestion.title;
+			startSpeech(currentQuestion.title);
 		} else {
-			resetApp();
+			resetApp("withChkbxQuiz");
 		}
 	}
 	/*** END FUNCTIONS ***/
