@@ -1,7 +1,7 @@
 /*===
-Into Binary (https://interview-questions.intobinary.org)
+Into Binary (https://piq.app.intobinary.org)
 &copy Coryright 2022 Into Binary. All rights reserved.
-Written for -- www.interview-questions.intobinary.org
+Written for -- www.piq.app.intobinary.org
 ===*/
 
 /*=== LIBRARIES ===*/
@@ -88,6 +88,9 @@ intobinary(document).ready(function() {
 	/*** END GLOBAL VARIABLES & OBJECTS ***/
 	
 	/*** SETUP ***/
+	if("speechSynthesis" in window) {} else {
+		intobinary(".js-button_sound").addClass("is-hidden");
+	}
 	/*** END SETUP ***/
 	
 	/*** ACTIONS ***/
@@ -111,58 +114,79 @@ intobinary(document).ready(function() {
 		});
 		
 		intobinary(".js-button_start").click(function() {
-			var theTag = intobinary(this),
-				theTimeButtonTag = document.querySelector(".js-button_time");
-			
-			if(theTimeButtonTag.classList.contains("is-active")) {
-				startTimer();
-			}
-			
+			startTimer();
 			playQuiz(theInterviewQuestions);
 		});
 		
 		intobinary(".js-button_back").click(function() {			
-			resetQuestion();
+			resetApp();
 		});
 		
 		intobinary(".js-button_next").click(function() {
+			resetQuestion();
+			startTimer();
 			nextQuestion();
+		});
+		
+		intobinary(".js-button_pause").click(function() {
+			if(timerPaused == true) { timerPaused = false; }
+			else { timerPaused = true; }
 		});
 	/*** END ACTIONS ***/
 	
 	/*** FUNCTIONS ***/	
+	function startSpeech(questionToRead) {
+		var theSoungButtonTag = document.querySelector(".js-button_sound");
+		if(theSoungButtonTag.classList.contains("is-active")) {
+			var speechToRead = new SpeechSynthesisUtterance();
+			var speechVoices = window.speechSynthesis.getVoices();
+			speechToRead.lang = "en-US";
+//			speechToRead.lang = "ru_RU";
+			speechToRead.voice = speechVoices[5];
+			speechToRead.pitch = 10;
+//			speechToRead.rate = 10;
+			speechToRead.text = questionToRead;
+
+			window.speechSynthesis.cancel();
+			window.speechSynthesis.speak(speechToRead);
+
+			document.querySelector(".js-button_pause").addEventListener("click", function() {
+				if(timerPaused == true) { window.speechSynthesis.pause(speechToRead); }
+				else { window.speechSynthesis.resume(speechToRead); }
+			});
+		}
+	}
+	
 	function startTimer() {
 		var theTimerTag = document.querySelector(".js-qTimerTag"),
+			theTimeButtonTag = document.querySelector(".js-button_time"),
 			timerTotalSecForCurrentQuestion = timerTotalSecPerQuestion,
 			timerTick = "";
 		
-		timerInterval = setInterval(function() {
-			if(timerPaused == false) {
-				if(timerTotalSecForCurrentQuestion >= 0) {
-					timerTick = timerTotalSecForCurrentQuestion--;
-					if (timerTick == 60) { theTimerTag.textContent = "01:00";  }
-					else if (timerTick < 60) { theTimerTag.textContent = "00:" + timerTick; }
-					else if (timerTick < 10) { theTimerTag.textContent = "00:0" + timerTick; }
-					else { theTimerTag.textContent = timerTick; }
-					
-					document.querySelector(".js-button_pause").addEventListener("click", function() {
-						if(timerPaused == true) { timerPaused = false; }
-						else { timerPaused = true; }
-					});
+		if(theTimeButtonTag.classList.contains("is-active")) {
+			timerInterval = setInterval(function() {
+				if(timerPaused == false) {
+					if(timerTotalSecForCurrentQuestion >= 0) {
+						timerTick = timerTotalSecForCurrentQuestion--;
+						if (timerTick == 60) { theTimerTag.textContent = "01:00";  }
+						else if (timerTick < 60) { theTimerTag.textContent = "00:" + timerTick; }
+						else if (timerTick < 10) { theTimerTag.textContent = "00:0" + timerTick; }
+						else { theTimerTag.textContent = timerTick; }
+					}
+					else {
+						resetQuestion();
+						startTimer();
+						nextQuestion();
+					}
 				}
-				else {
-					/*
-					answerSkipped = true;
-					revealAnswer();
-					*/
-				}
-			}
-		}, 1000);
+			}, 1000);
+		}
 	}
 
-	function resetApp() {
-		document.querySelector("#chkbx-quiz").checked = false;
+	function resetApp(varCMD) {
+		if(varCMD == "withChkbxQuiz") { document.querySelector("#chkbx-quiz").checked = false; }
 		qNoIndex = 0;
+		resetQuestion();
 	}
 	function resetQuestion() {
 		timerPaused = false;
@@ -175,7 +199,7 @@ intobinary(document).ready(function() {
 			theTimerTag = document.querySelector(".js-timerTag"),
 			theQTimerTag = document.querySelector(".js-qTimerTag");
 			
-//		thePauseButtonTag.removeClass("is-hidden");
+		thePauseButtonTag.removeClass("is-hidden");
 		if(theTimeButtonTag.hasClass("is-active")) {
 			theTimerTag.textContent = "01:00";
 			theQTimerTag.textContent = "01:00";
@@ -220,8 +244,9 @@ intobinary(document).ready(function() {
 			questionIndexTag.innerHTML = "Question " + qNoIndex;
 			
 			questionTag.textContent = currentQuestion.title;
+			startSpeech(currentQuestion.title);
 		} else {
-			resetApp();
+			resetApp("withChkbxQuiz");
 		}
 	}
 	/*** END FUNCTIONS ***/

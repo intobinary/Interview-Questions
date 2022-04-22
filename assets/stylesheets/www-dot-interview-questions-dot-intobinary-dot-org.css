@@ -1,7 +1,7 @@
 /*===
-Into Binary (https://interview-questions.intobinary.org)
+Into Binary (https://piq.app.intobinary.org)
 &copy Coryright 2022 Into Binary. All rights reserved.
-Written for -- www.interview-questions.intobinary.org
+Written for -- www.piq.app.intobinary.org
 ===*/
 
 
@@ -19,23 +19,23 @@ Written for -- www.interview-questions.intobinary.org
 	/*** END CANCEL ***/
 		
 	/*** Z-INDEXES ***/
-		.menu{position:relative;z-index:10;}
+		.d-background{position:relative;z-index:10;}.header,.content,.footer{position:relative;z-index:20;}.menu,.quiz{position:relative;z-index:30;}
 	/*** END Z-INDEXES ***/
 		
 	/*** COLORS ***/
-		.u-button{background-color:rgba(99, 66, 99, .5);}.u-button:hover,.u-button:active,.u-button:focus,.u-button.is-active{background-color:rgba(99, 66, 99, 1);}.menu{background-color:rgba(0, 0, 0, .9);}
+		.menu{color:#fff;}.quiz-content-question{background-color:rgba(0, 0, 0, .1);}.u-button{background-color:rgba(0, 0, 0, .1) !important;}.u-button:hover,.u-button:active,.u-button:focus,.u-button.is-active{background-color:rgba(0, 0, 0, .5) !important;}.menu{background-color:rgba(0, 0, 0, .9);}
 	/*** END COLORS ***/
 		
 	/*** FONTS ***/
-		@font-face{font-family:"OCR A";src:url("https://interview-questions.intobinary.org/assets/fonts/OCR-A-extended/ocraext.ttf");/*src:url("https://interview-questions.intobinary.org/assets/fonts/ALPHABETH.eot") format("embedded-opentype"),url("https://interview-questions.intobinary.org/assets/fonts/ALPHABETH.woff2") format("woff2"),url("https://interview-questions.intobinary.org/assets/fonts/ALPHABETH.woff") format("woff"),url("https://interview-questions.intobinary.org/assets/fonts/ALPHABETH.ttf") format("trutype"),url("https://interview-questions.intobinary.org/assets/fonts/ALPHABETH.svg") format("svg");*/}body{font-family:"OCR A", serif;}.trivia-header-timer-box{font-family:"Arial Black", sans-serif;}body, html{text-align:center;}.menu-footer-links-a{font-variant:small-caps;}.menu-footer-links-a{text-decoration:underline;}
+		@font-face{font-family:"OCR A";src:url("https://piq.app.intobinary.org/assets/fonts/OCR-A-extended/ocraext.ttf");/*src:url("https://piq.app.intobinary.org/assets/fonts/ALPHABETH.eot") format("embedded-opentype"),url("https://piq.app.intobinary.org/assets/fonts/ALPHABETH.woff2") format("woff2"),url("https://piq.app.intobinary.org/assets/fonts/ALPHABETH.woff") format("woff"),url("https://piq.app.intobinary.org/assets/fonts/ALPHABETH.ttf") format("trutype"),url("https://piq.app.intobinary.org/assets/fonts/ALPHABETH.svg") format("svg");*/}body{font-family:"OCR A", serif;}.menu-content-button,.content-button,.quiz-content-index{font-family:"Arial Black", sans-serif;}.content-title{font-size:2em;}.quiz-content-question{font-size:1.5em;}.menu-header-title{font-size:1.5em;}body, html{text-align:center;}.content-button,.quiz-content-index,.content-title,.menu-header-title{font-weight:bold;}.content-title,.menu-header-title{text-transform:uppercase;}.menu-footer-links-a{font-variant:small-caps;}.menu-footer-links-a{text-decoration:underline;}
 	/*** END FONTS ***/
 		
 	/*** MEDIA ***/
-		
+		.u-button.js-button_start{background:url("https://piq.app.intobinary.org/assets/images/icon_nasa_green.png") no-repeat center center;}.u-button.js-button_share{background:url("https://piq.app.intobinary.org/assets/images/icon_share_black.png") no-repeat center center;}.u-button.js-button_time{background:url("https://piq.app.intobinary.org/assets/images/icon_alarm-off_black.png") no-repeat center center;}.u-button.js-button_time.is-active{background:url("https://piq.app.intobinary.org/assets/images/icon_alarm_black.png") no-repeat center center;}.u-button.js-button_sound{background:url("https://piq.app.intobinary.org/assets/images/icon_mute_black.png") no-repeat center center;}.u-button.js-button_sound.is-active{background:url("https://piq.app.intobinary.org/assets/images/icon_sound_black.png") no-repeat center center;}.u-button.js-button_pause{background:url("https://piq.app.intobinary.org/assets/images/icon_pause_black.png") no-repeat center center;}.u-button.js-button_pause.is-active{background:url("https://piq.app.intobinary.org/assets/images/icon_play_black.png") no-repeat center center;}.u-button.js-button_next{background:url("https://piq.app.intobinary.org/assets/images/icon_question_black.png") no-repeat center center;}.u-button.js-button_back{background:url("https://piq.app.intobinary.org/assets/images/icon_back_black.png") no-repeat center center;}.u-button.js-button_close{background:url("https://piq.app.intobinary.org/assets/images/icon_close_green.png") no-repeat center center;}.u-button{background-size:50% 50% !important;}.d-background-top{background:url("https://piq.app.intobinary.org/assets/images/matrix_top_www-dot-intobinary-dot-org.png") no-repeat;}.d-background-bottom{background:url("https://piq.app.intobinary.org/assets/images/matrix_bottom_www-dot-intobinary-dot-org.png") no-repeat;}.d-background-top{background-position:bottom right;}.d-background-bottom{background-position:top left;}.d-background-top,.d-background-bottom{background-size:300px 900px !important;}
 	/*** END MEDIA ***/
 		
 	/*** UTILITIES ***/
-		.m-app-bar-edge{//border:1px solid red;}.u-button{display:block;width:3em;height:3em;padding:1em 1.5em;}
+		.m-app-bar-edge{//border:1px solid red;}.u-button{display:block;width:3em;height:3em;padding:1em 1.5em;border-radius:.5em;}
 	/*** END UTILITIES ***/
 		
 	/*** MIXINS ***/
@@ -43,11 +43,11 @@ Written for -- www.interview-questions.intobinary.org
 	/*** END MIXINS ***/
 		
 	/*** COMMONS ***/
-		body, html,.m-app,.m-app-content,.content,.m-app-bar,.m-app-bar-edge,.m-app-bar-middle{display:flex;align-items:center;justify-content:center;}body, html,.m-app{flex-direction:column;}.m-app-bar{flex-direction:row;}.m-app-content,.content,.m-app-bar-middle{flex:1;}
+		body, html,.m-app,.m-app-content,.content,.m-app-bar,.m-app-bar-edge,.m-app-bar-middle{display:flex;align-items:center;justify-content:center;}body, html,.content,.m-app,.m-app-content{flex-direction:column;}.m-app-bar{flex-direction:row;}.content,.m-app-content,.m-app-bar-middle{flex:1;}
 	/*** END COMMONS ***/
 		
 	/*** COMPONENTS ***/
-		body, html{}.m-app-content,.menu-footer,.content,.m-app-bar{width:100%;padding:1em;}.menu,.quiz{position:fixed;top:0;left:0;}.menu-footer-links-a{display:inline-block;margin:1em;}.menu-footer-version{display:block;}
+		body, html{}.m-app-content,.menu-footer,.content,.m-app-bar{width:100%;padding:1em;}.menu,.quiz{position:fixed;top:0;left:0;}.menu-content{padding:2em;overflow-y:auto;}.menu-content-p{padding:0 0 2em 0;}.menu-content-button{width:auto;}.menu-footer-links-a{display:inline-block;margin:1em;}.menu-footer-version{display:block;}.quiz-content-index,.quiz-content-question{//display:block;}.content-button,.quiz-content-index{padding:1em;}.quiz-content-question{padding:2em;margin:0 2em;border-radius:.5em;}
 	/*** END COMPONENTS ***/
 		
 	/*** INTERACTIVITY ***/
@@ -58,13 +58,13 @@ Written for -- www.interview-questions.intobinary.org
 		@media screen and (max-width:50em){html, body{font-size:14px;}}@media screen and (min-width:50em){html, body{font-size:16px;}}
 	/*** END MEDIA QUERIES ***/
 		
-	/*** ANIMATIONS ***/
-		
-	/*** END ANIMATIONS ***/
-		
 	/*** DECORATION ***/
-		
+		.u-button.js-button_start{animation:nasa 1s infinite alternate;}.d-background{position:fixed;top:0;left:0;width:100%;height:100%;}.d-background:before{content:"";position:absolute;top:0;left:0;z-index:10;width:100%;height:100%;background-color:rgba(255, 255, 255, .9);}.d-background-top,.d-background-bottom{position:absolute;display:block;overflow:hidden;}.d-background-top{top:-1em;left:-1em;width:50%;height:50%;animation:animateTopBackground 1s infinite alternate;}.d-background-bottom{bottom:-1em;right:-1em;width:30%;height:30%;animation:animateBottomBackground 1s infinite alternate;}
 	/*** END DECORATION ***/
+		
+	/*** ANIMATIONS ***/
+		@keyframes nasa{from{background:url("https://piq.app.intobinary.org/assets/images/icon_nasa_green.png") no-repeat center center;}to{background:url("https://piq.app.intobinary.org/assets/images/icon_nasa_black.png") no-repeat center center;}}@keyframes animateTopBackground{from{margin:0;}to{margin:1em 0 0 1em;}}@keyframes animateBottomBackground{from{margin:0;}to{margin:0 1em 1em 0;}}
+	/*** END ANIMATIONS ***/
 		
 	/*** BETAs ***/
 		
