@@ -171,10 +171,10 @@ intobinary(document).ready(function() {
 		if(theSoungButtonTag.classList.contains("is-active")) {
 			var speechToRead = new SpeechSynthesisUtterance();
 			var speechVoices = window.speechSynthesis.getVoices();
-//			speechToRead.lang = "en-US";
+			speechToRead.lang = "en-US";
 //			speechToRead.lang = "ru_RU";
-			speechToRead.voice = speechVoices[5];
-			speechToRead.pitch = 10;
+			speechToRead.voice = speechVoices[10];
+//			speechToRead.pitch = 10;
 //			speechToRead.rate = 10;
 			speechToRead.text = questionToRead;
 
